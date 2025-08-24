@@ -2,9 +2,8 @@
 
 .bpMessageBlocksVideo { max-width: 40%; }
 
-/* ---------- message area ---------- */
 .bpMessageListViewport{
-  padding: 24px 20px 60px;   /* space, with room for composer */
+  padding: 24px 20px 60px;   
 }
 
 .bpMessageContainer{ padding-block: 4px; }
@@ -15,7 +14,6 @@
   box-shadow: 0 6px 18px rgba(2,6,23,.06);
 }
 
-/* base: white bubble, no native border */
 .bpMessageBlocksBubble[data-direction="incoming"],
 .bpMessageBlocksBubble[data-direction="outgoing"]{
   position: relative;
@@ -23,33 +21,33 @@
   border: 0 !important;
 }
 
-/* shared spinning ring */
+
 .bpMessageBlocksBubble[data-direction="incoming"]::after,
 .bpMessageBlocksBubble[data-direction="outgoing"]::after{
   content: "";
   position: absolute;
-  inset: -2px;                 /* ring thickness */
+  inset: -2px;                
   padding: 2px;
   border-radius: inherit;
   pointer-events: none;
-  /* show only the ring by masking out the center */
+  
   -webkit-mask:
     linear-gradient(#000 0 0) content-box,
     linear-gradient(#000 0 0);
   -webkit-mask-composite: xor;
           mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
           mask-composite: exclude;
-  --angle: 0turn;              /* animated below */
+  --angle: 0turn;              
   animation: borderSpin 6s linear infinite;
 }
 
-/* warm palette - incoming */
+
 .bpMessageBlocksBubble[data-direction="incoming"]::after{
   background: conic-gradient(from var(--angle),
     #f8690f, #f9d139, #f8690f);
 }
 
-/* cool palette - outgoing */
+
 .bpMessageBlocksBubble[data-direction="outgoing"]::after{
   background: conic-gradient(from var(--angle),
     #2a47a8, #0aabf5, #2a47a8);
@@ -59,7 +57,7 @@
   to { --angle: 1turn; }
 }
 
-/* reduce motion */
+
 @media (prefers-reduced-motion: reduce){
   .bpMessageBlocksBubble[data-direction="incoming"]::after,
   .bpMessageBlocksBubble[data-direction="outgoing"]::after{
@@ -84,4 +82,5 @@
 
 .bpComposerVoiceButton{
     display: none;
+
 }
