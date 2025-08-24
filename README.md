@@ -23,7 +23,7 @@
 <ul>
   <li>A custom trigger listens for the boolean at <code>event.payload.payload.dabbed</code>.</li>
   <li><code>true</code> routes to <code>global.dabbed</code> workflow after a short hype line.</li>
-  <li><code>false</code> routes to <code>global.fumbled</code> workflowa fter a playful “aura loss” line.</li>
+  <li><code>false</code> routes to <code>global.fumbled</code> workflow after a playful “aura loss” line.</li>
   <li>If the user emphatically asks to jump (ALL CAPS or multiple exclamation marks), the bot may route them to the requested flow. Otherwise it keeps the convo light and simple.</li>
 </ul>
 
