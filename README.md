@@ -3,7 +3,7 @@
 <p>
   A tiny React app that showcases the <code>@botpress/webchat</code> React components with a playful “dab up” flow.
 
-  Demo <a href="https://spectacular-melba-a45014.netlify.app/" target="new">Here </a>
+  Demo <a href="spectacular-dapper.netlify.app" target="new">Here </a>
 </p>
 
 <h2>What it uses</h2>
